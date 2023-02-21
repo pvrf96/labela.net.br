@@ -32,7 +32,14 @@ html {
   height: 100vh;
 }
 
-
+@keyframes animateNavbar {
+  0% {
+    top: -8rem;
+  }
+  100% {
+    top: 0;
+  }
+}
 
 .navbar-logo {
   position: static;
@@ -57,6 +64,44 @@ top: -10px;
   font-family: "Baloo Da 2";
 }
 
+.menu {
+  width: 4rem;
+  height: 4rem;
+  position: fixed;
+  z-index: 500;
+  top: 2rem;
+  right: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  height: 0.2rem;
+  background-color: #eee;
+  transition: transform 0.3s;
+}
+
+.line-1 {
+  width: 50%;
+}
+
+.line-3 {
+  width: 50%;
+  margin-left: auto;
+}
+
+.change .line-1 {
+  transform: translate(100%, 1rem) rotate(-35deg);
+  transform-origin: right;
+}
+
+.change .line-3 {
+  transform: translateY(-1rem) rotate(35deg);
+  transform-origin: right;
+}
 
 .nav-list {
   position: absolute;
@@ -99,6 +144,12 @@ top: -10px;
   background-size: cover;
   }
 
+  .iframe-container{
+    position:relative;
+    width: 50%;
+    padding: 56.25%;
+    height: 50%;
+  }
 .banner {
   position: absolute;
   top: 20%;
@@ -119,6 +170,73 @@ font-family:"Baloo Da 2", cursive;
   overflow: hidden;
   color:#fff;
 
+}
+.video-container{
+ position: relative;
+ top:50%;
+  left:50%;
+  transform: translate(-20%,-100%);
+ 
+}
+
+.a-btn {
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  border: 0; 
+  font: inherit; 
+  vertical-align: baseline;
+  color: #2e82bc; 
+  outline: 0; 
+  line-height: 1; 
+  text-align: center; 
+  position:relative!important; display: inline-block!important;
+  border-style: solid; 
+  width: 100%; padding-left: 0!important; padding-right: 0!important; 
+  margin-bottom: 10px; 
+  padding: 22px 44px; border-color: #ff5535; border-width: 0px; 
+  border-radius: 6px; 
+  background: linear-gradient(to bottom, #ff6600 0%, #ff5535 100%); 
+  box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.5); 
+  text-decoration: none!important;
+}
+
+.span-btn {
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased; 
+  text-align: center;
+  margin: 0; 
+  border: 0; 
+  font: inherit;
+  vertical-align: baseline;
+  display: block; 
+  position: relative; 
+  z-index: 1; 
+  padding: 0 15px; 
+  white-space: normal; 
+  font-size: 25px;
+  color: #ffffff; 
+  font-family: Oswald; 
+  font-weight: bold; 
+  text-shadow: #000000 0px 1px 0px;
+  text-decoration: none;
+}
+.span-btn2 {
+  -webkit-font-smoothing: antialiased; 
+  text-align: center;
+  padding: 0; border: 0;
+  font: inherit; 
+  vertical-align: baseline; 
+  display: block; 
+  position: relative;
+  z-index: 1; 
+  margin: .2em 0 -.5em; 
+  font-size: 15px; 
+  color: #f5e051; 
+  font-family: Cabin; 
+  font-weight: bold; 
+  font-style: italic;
+  text-shadow: #000000 0px 1px 0px;
 }
 
 .banner-heading {
@@ -145,6 +263,7 @@ font-family:"Baloo Da 2", cursive;
   margin-top: 40px;
   box-sizing: border-box;
 }
+
 
 .heading-1 {
   animation: animateHeading 12s 3s infinite;
@@ -219,6 +338,12 @@ font-family:"Baloo Da 2", cursive;
     visibility: visible;
   }
 }
+
+
+
+
+  
+ 
 
 @media screen and (min-width: 768px){
   .imgbox img{
@@ -496,4 +621,61 @@ height: 0;
   width: 100%;
   height: 100%;
 }
+
+
+@media (max-width:700px){
+  video{
+    width:100%
+    }
+  .video-container{
+    position: relative;
+  
+   left: 20%;
+  margin-top: -90%;
+  
+  } 
+  }
+
+
+
+@media (max-width:380px){
+  video{
+    width:100%
+    }
+  .video-container{
+    position: relative;
+  
+   left: 20%;
+  margin-top: -50%;
+  
+  } 
+  }
+
+  @media (max-width:370px){
+    video{
+      width:100%
+      }
+    .video-container{
+      position: relative;
+    
+     left: 20%;
+    margin-top: -70%;
+    
+    } 
+    }
+ 
+    @media (max-width:700px){
+      .banner-heading {
+      position: relative;
+      top: 140px;
+    }
+    }
+   
+    @media (max-width:700px){
+    .a-btn {
+position: relative;
+top: -80px;
+padding: 20px;
+    }
+  }
 /* End of Responsive */
