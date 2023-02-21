@@ -631,7 +631,7 @@ height: 0;
     position: relative;
   
    left: 20%;
-  margin-top: -90%;
+  margin-top: -70%;
   
   } 
   }
@@ -659,7 +659,7 @@ height: 0;
       position: relative;
     
      left: 20%;
-    margin-top: -70%;
+    margin-top: -60%;
     
     } 
     }
@@ -675,7 +675,7 @@ height: 0;
     .a-btn {
 position: relative;
 top: -80px;
-padding: 20px;
+
     }
   }
-
+/* End of Responsive */
