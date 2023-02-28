@@ -1,355 +1,278 @@
-/* Common Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-  text-decoration: none;
-  list-style-type: none;
-  font-family: "Baloo Da 2", cursive;
-}
-
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-}
-/* End of Common Styles */
-
-/* Navbar */
-.navbar {
-  width: 100%;
-  height: 8rem;
-  background-color: rgba(0, 0, 0, 0.9);
-  position: fixed;
-  top: -8rem;
-  padding: 3rem;
-  z-index: 10;
-  animation: animateNavbar 1s 0.5s forwards;
-  transition: height 0.5s;
-}
-
-.navbar.change {
-  height: 100vh;
-}
-
-@keyframes animateNavbar {
-  0% {
-    top: -8rem;
+@media (max-width: 768px) {
+  .video-player {
+    width: 100%;
+    background: 0 0;
   }
-  100% {
+  .video-player iframe {
+    width: 100%;
+    height: 100%;
     top: 0;
+    margin: auto;
+  }
+  #frame {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin: auto;
   }
 }
 
-.navbar-logo {
-  position: static;
- justify-content: center;
-text-align: center;
-display: flex;
-align-items: center;
-top: -10px;
+
+  
+ 
+
+* {
+  font-family: helvetica, arial, sans-serif;
 }
 
-.navbar-logo a {
-  font-family: "Baloo Da 2";
-  font-size: 3rem;
-  color: #eee;
-  letter-spacing: 0.1rem;
+body {
+  font-size: 16px;
 }
 
-.navbar-logo span {
-  font-size: 3.5rem;
-  font-weight: bold;
-  color: #ffffff;
-  font-family: "Baloo Da 2";
+.fb-comments {
+  border: 1px solid #e9ebee;
+  border-radius: 3px;
+  padding: 0 15px;
+  padding-bottom: 15px;
+  margin: auto;
+  position: relative;
+  color: #4267b2;
 }
 
-.menu {
-  width: 4rem;
-  height: 4rem;
-  position: fixed;
-  z-index: 500;
-  top: 2rem;
-  right: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+.fb-comments-header {
+  padding: 15px 0;
+  border-bottom: 1px solid #e9ebee;
+}
+
+.fb-comments-header span {
+  color: #000;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+.fb-comments-comment {
+  border: none;
+  padding: 0;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.fb-comments-reply-wrapper {
+  margin-left: 60px;
+  border-left: 1px dotted #e9ebee;
+  padding-left: 5px;
+}
+
+tr,
+td {
+  border: none;
+  margin: 0;
+}
+
+td {
+  padding: 2.5px;
+}
+
+tr {
+  padding: 2.5px 0;
+}
+
+.fb-comments-comment-img {
+  vertical-align: top;
+  width: 48px;
+  padding-right: 5px;
+}
+
+.fb-comments-comment-img img {
+  max-width: 48px;
+  border-radius: 25px;
+}
+
+.fb-comments-comment-name {
+  font-size: 0.85em;
+}
+
+.fb-comments-comment-name name {
+  color: #365899;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.fb-comments-comment-name name:hover {
+  text-decoration: underline;
+}
+
+.fb-comments-comment-name occupation {
+  color: #90949c;
+}
+
+.fb-comments-comment-text {
+  font-size: 0.9em;
+  color: #000;
+  border-radius: 21px;
+  background-color: #eaebef;
+  padding: 10px 20px;
+}
+
+.fb-comments-comment-actions like,
+.fb-comments-comment-actions reply {
+  font-size: 0.75em;
+  color: #4267b2;
+  text-decoration: none;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.fb-comments-comment-actions like.liked {
+  color: #90949c;
+}
+
+.fb-comments-comment-actions like:hover,
+.fb-comments-comment-actions reply:hover {
+  text-decoration: underline;
+}
+
+.fb-comments-comment-actions likes {
+  font-size: 13px;
+  background: url(https://cloudcode.site/likes.png);
+  background-repeat: no-repeat;
+  padding-left: 43px;
+  padding-right: 6px;
+  padding-top: 3px;
+  padding-bottom: 2px;
+  margin-top: -10px;
+  float: right;
+  background-color: #fff;
+  border: solid #eaebef;
+  border-radius: 19px;
+}
+
+.fb-comments-comment-actions date {
+  font-size: 0.75em;
+  color: #90949c;
+  text-decoration: none;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.fb-comments-comment-actions date:hover {
+  text-decoration: underline;
+}
+
+.fb-comments-loadmore {
+  background: #4080ff;
+  border: 1px solid #4080ff;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 14px;
+  padding: 0.875em;
+  text-shadow: none;
+  width: 100%;
+  font-weight: 700;
+  cursor: hand;
   cursor: pointer;
 }
 
-.line {
+.fb-reply-input {
+  border: 1px solid lightgrey;
+  border-radius: 3px;
   width: 100%;
-  height: 0.2rem;
-  background-color: #eee;
-  transition: transform 0.3s;
+  padding: 5px 7.5px;
+  font-size: 0.75em;
+  color: #000;
+  outline: none;
 }
 
-.line-1 {
-  width: 50%;
+.fb-reply-input:hover,
+.fb-reply-button:hover {
+  outline: none;
 }
 
-.line-3 {
-  width: 50%;
-  margin-left: auto;
-}
-
-.change .line-1 {
-  transform: translate(100%, 1rem) rotate(-35deg);
-  transform-origin: right;
-}
-
-.change .line-3 {
-  transform: translateY(-1rem) rotate(35deg);
-  transform-origin: right;
-}
-
-.nav-list {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.2s;
-}
-
-.change .nav-list {
-  opacity: 1;
-  visibility: visible;
-  transition: all 0.7s 0.5s;
-}
-
-.nav-link {
-  font-family: "MADE Soulmaze", sans-serif;
-  font-size: 4rem;
-  letter-spacing: 0.3rem;
+.fb-reply-button {
+  background: #4080ff;
+  border: 1px solid #4080ff;
+  border-radius: 3px;
+  box-sizing: border-box;
   color: #fff;
-  margin: 2rem 0;
-  transition: color 0.4s;
-}
-
-.nav-link:hover {
-  color: #9e0e09;
-}
-/*  End of Navbar */
-
-/* Section 1 */
-.section-1 {
+  font-size: 0.75em;
+  padding: 5px 7.5px;
+  text-shadow: none;
   width: 100%;
-  height: 100vh;
-  background: url(images/dark-bg.jpeg) no-repeat;
-  background-size: cover;
-  }
-
-  .iframe-container{
-    position:relative;
-    width: 50%;
-    padding: 56.25%;
-    height: 50%;
-  }
-
-
-.text-box{ height: 40rem;
-font-family:"Baloo Da 2", cursive; 
-  margin-bottom: 4rem;
- top:100px;
- font-size: 30px;
- text-align: center;
- position: relative;
-  perspective: 50rem;
-  overflow: hidden;
-  color:#fff;
-
+  font-weight: 700;
+  cursor: hand;
+  cursor: pointer;
+  outline: none;
 }
-.video-container{
- position: relative;
- top:50%;
-  left:50%;
-  transform: translate(-20%,-100%);
- 
+
+.bbtn {
+  width: 100%;
+  max-width: 449px;
+}
+
+@media (max-width: 768px) {
+  .video-player {
+    margin-top: 0 !important;
+  }
 }
 
 .a-btn {
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  margin: 0;
-  border: 0; 
-  font: inherit; 
-  vertical-align: baseline;
-  color: #2e82bc; 
-  outline: 0; 
-  line-height: 1; 
-  text-align: center; 
-  position:relative!important; display: inline-block!important;
-  border-style: solid; 
-  width: 100%; padding-left: 0!important; padding-right: 0!important; 
-  margin-bottom: 10px; 
-  padding: 22px 44px; border-color: #ff5535; border-width: 0px; 
-  border-radius: 6px; 
-  background: linear-gradient(to bottom, #ff6600 0%, #ff5535 100%); 
-  box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.5); 
-  text-decoration: none!important;
-}
-
-.span-btn {
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased; 
-  text-align: center;
-  margin: 0; 
-  border: 0; 
-  font: inherit;
-  vertical-align: baseline;
-  display: block; 
-  position: relative; 
-  z-index: 1; 
-  padding: 0 15px; 
-  white-space: normal; 
-  font-size: 25px;
-  color: #ffffff; 
-  font-family: Oswald; 
-  font-weight: bold; 
-  text-shadow: #000000 0px 1px 0px;
-  text-decoration: none;
-}
-.span-btn2 {
-  -webkit-font-smoothing: antialiased; 
-  text-align: center;
-  padding: 0; border: 0;
-  font: inherit; 
-  vertical-align: baseline; 
-  display: block; 
-  position: relative;
-  z-index: 1; 
-  margin: .2em 0 -.5em; 
-  font-size: 15px; 
-  color: #f5e051; 
-  font-family: Cabin; 
-  font-weight: bold; 
-  font-style: italic;
-  text-shadow: #000000 0px 1px 0px;
-}
-
-
-
-
-
-
-
-
-/* End of Section 1 */
-
-
-/* Responsive */
-
-
-
-
-@media (max-width: 500px) {
-  html {
-    font-size: 30%;
-  }
-
-
-.text-box{
-  margin-top:-120px;
-}
-.banner{
-  margin-top: -100px;
-   height: 100vh;
-}
-.navbar-logo{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  font-size: 6rem;
-}
-.navbar{
-  position:relative;
-}
-.menu{
-  position: relative;
-}
-.iframe-container{
- width: 100%;
- padding-bottom: 56.25%;
-height: 0;
-  position: relative;
-  margin-top: -300px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.iframe-container iframe{
-  top:0;
-  left:0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-}
-
-
-
-
-
-
-
-
-@media (max-width:700px){
-  video{
-    width:100%
+      text-decoration: none;
+      -webkit-font-smoothing: antialiased;
+      margin: 0;
+      border: 0; 
+      font: inherit; 
+      vertical-align: baseline;
+      color: #2e82bc; 
+      outline: 0; 
+      line-height: 1; 
+      text-align: center; 
+      position:relative!important; display: inline-block!important;
+      border-style: solid; 
+      width: 100%; padding-left: 0!important; padding-right: 0!important; 
+      margin-bottom: 10px; 
+      padding: 22px 44px; border-color: #ff5535; border-width: 0px; 
+      border-radius: 6px; 
+      background: linear-gradient(to bottom, #ff6600 0%, #ff5535 100%); 
+      box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.5); 
+      text-decoration: none!important;
     }
-  .video-container{
-    position: relative;
-  
-   left: 20%;
-  margin-top: -60%;
-  
-  } 
-  }
-
-
-
-@media (max-width:380px){
-  video{
-    width:100%
+    .span-btn {
+      text-decoration: none;
+      -webkit-font-smoothing: antialiased; 
+      text-align: center;
+      margin: 0; 
+      border: 0; 
+      font: inherit;
+      vertical-align: baseline;
+      display: block; 
+      position: relative; 
+      z-index: 1; 
+      padding: 0 15px; 
+      white-space: normal; 
+      font-size: 25px;
+      color: #ffffff; 
+      font-family: Oswald; 
+      font-weight: bold; 
+      text-shadow: #000000 0px 1px 0px;
+      text-decoration: none;
     }
-  .video-container{
-    position: relative;
-  
-   left: 20%;
-  margin-top: -50%;
-  
-  } 
-  }
-
-  @media (max-width:370px){
-    video{
-      width:100%
-      }
-    .video-container{
+    .span-btn2 {
+      -webkit-font-smoothing: antialiased; 
+      text-align: center;
+      padding: 0; border: 0;
+      font: inherit; 
+      vertical-align: baseline; 
+      display: block; 
       position: relative;
-    
-     left: 20%;
-    margin-top: -80%;
-    
-    } 
+      z-index: 1; 
+      margin: .2em 0 -.5em; 
+      font-size: 15px; 
+      color: #f5e051; 
+      font-family: Cabin; 
+      font-weight: bold; 
+      font-style: italic;
+      text-shadow: #000000 0px 1px 0px;
     }
- 
-    @media (max-width:700px){
-      .banner-heading {
-      position: relative;
-      top: 160px;
-    }
-    }
-   
-    @media (max-width:700px){
-    .a-btn {
-position: relative;
-top: -200px;
-
-    }
-  }
-/* End of Responsive */
